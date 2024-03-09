@@ -10,7 +10,7 @@ class MySQLDB:
         self.connection = None
     def connect(self):
         try: 
-            if(self.connect == None):
+            if(self.connection == None):
                 self.connection = mysql.connector.connect(
                     host = self.host, 
                     user  = self.user, 
