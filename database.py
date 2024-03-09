@@ -29,9 +29,17 @@ class MySQLDB:
                     self.connection = None
             except mysql.connector.Error as error:
                 print("ERROR")                
+    
+    def execute_query(self, query, params=None):
+        try: 
+            cursor = self.connection.cursor()
+            cursor.execute(query, params)
+            result = cursor.fetchall()
+            return result
+        except mysql.connector.Error as eror:
+            print(f"error:"{eror})
 
-
-
+            
 
 db =MySQLDB("localhost" ,"root", "", "test-lp")
 print("conectado")
