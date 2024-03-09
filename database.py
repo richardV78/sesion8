@@ -13,11 +13,11 @@ class MySQLDB:
             if(self.connection == None):
                 self.connection = mysql.connector.connect(
                     host = self.host, 
-                    user  = self.user, 
-                    paassword = self.pw, 
+                    user = self.user, 
+                    password = self.pw, 
                     database = self.db
                 )
-                os.system("colora2")            
+                os.system("color a2")            
                 print("chatel te conectaste")
         except mysql.connector.Error as error:
             print("ERROR MIENTRAS SE ESTABA CONECTANDO LA BASE DE DATOS{}".format(error))
@@ -37,11 +37,11 @@ class MySQLDB:
             result = cursor.fetchall()
             return result
         except mysql.connector.Error as eror:
-            print(f"error:"{eror})
+            print(f"error:{eror}")
 
             
 
-db =MySQLDB("localhost" ,"root", "", "test-lp")
+db =MySQLDB("localhost" ,"root", "", "testlp")
 print("conectado")
 
 db.connect()
