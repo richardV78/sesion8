@@ -6,3 +6,4 @@ def _init_(self, host, user, password, database):
     self.user = user
     self.pw = password
     self.db = database
+
